@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(120%);
+  }
+}
+
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 16px;
+  background-color: #d1e7dd;
+  border-radius: 8px;
+  color: #0f5132;
+  animation: slideIn 0.5s forwards;
+  z-index: 1000;
+}
+
+.alert.slide-out {
+  animation: slideOut 0.5s forwards;
+}
+
+svg {
+  margin-left: 0 !important;
+}
